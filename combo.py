@@ -31,8 +31,13 @@ if beverage == "yes":
   print("You said", beveragesize, "drink.")
 
   if beveragesize == "small":
-    order.append("small beverage")
-    total = total + 1.00
+    supersize = input("Would you like to supersize?")
+    if supersize == "True":
+      order.append("large beverage")
+      total = total + 2.25
+    else:
+      order.append("small beverage")
+      total = total + 1.00
   if beveragesize == "medium":
     order.append("medium beverage")
     total = total + 1.75
